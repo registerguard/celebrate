@@ -1,3 +1,5 @@
 .DS_Store
 *.pyc
 celebrate/secrets.json
+celebrate/settings/local.py
+requirements/local.txt
