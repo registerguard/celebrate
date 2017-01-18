@@ -11,6 +11,7 @@
 
     {{ page.intro|richtext }}
 
+    {# Bootstrap form class hierarchy example: https://jonbake.com/demos/contact-form/ #}
     <form class="navbar-form" action="." enctype="multipart/form-data" method="POST">
 
         {% csrf_token %}
