@@ -8,6 +8,7 @@ from captcha.fields import ReCaptchaField
 
 class SubmitMemoryForm(forms.ModelForm):
     captcha = ReCaptchaField()
+
     class Meta:
         model = RegisterGuardMemory
         fields = ['text', 'captcha',]
@@ -27,7 +28,6 @@ class SubmitMemoryImageForm(forms.ModelForm):
     # 100MB 104857600
     # 250MB - 214958080
     # 500MB - 429916160
-
     MAX_UPLOAD_SIZE = 5242880 #5MB
 
     def clean_image(self):

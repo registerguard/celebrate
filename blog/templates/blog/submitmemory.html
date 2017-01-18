@@ -15,11 +15,11 @@
 
         {% csrf_token %}
 
-        {{ form|crispy }}
-
         {{ formset.management_form }}
 
         {{ formset|crispy }}
+
+        {{ form|crispy }}
 
         <button class="btn btn-primary" type="submit">Send us a memory</button>
 

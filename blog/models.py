@@ -109,7 +109,7 @@ class SubmitMemory(Page):
         else:
             form = SubmitMemoryForm()
             formset = ImageFormSet(queryset=RegisterGuardMemoryImage.objects.none())
-        
+
         return render(request, 'blog/submitmemory.html', {
             'page': self,
             'form': form,
