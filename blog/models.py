@@ -39,7 +39,7 @@ class BlogPage(Page):
 
 
 class RegisterGuardMemory(ClusterableModel):
-    text = models.TextField()
+    text = models.TextField(u'Description')
 
     content_panels = [
         FieldPanel('text'),
