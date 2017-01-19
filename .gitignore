@@ -3,3 +3,4 @@
 celebrate/secrets.json
 celebrate/settings/local.py
 requirements/local.txt
+media/

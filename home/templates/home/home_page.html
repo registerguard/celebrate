@@ -5,5 +5,9 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    {{ page.body|richtext }}
+    {% if self.body %}
+        <div class="body-content">
+            {% include "home/includes/streamfield.html" %}
+        </div> <!-- /.body-content -->
+    {% endif %}
 {% endblock %}

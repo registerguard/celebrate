@@ -11,17 +11,14 @@
 
     {{ page.intro|richtext }}
 
-    {# Bootstrap form class hierarchy example: https://jonbake.com/demos/contact-form/ #}
-    <form class="navbar-form" action="." enctype="multipart/form-data" method="POST">
+    <form class="form-horizontal" action="." enctype="multipart/form-data" method="POST">
 
         {% csrf_token %}
 
         {{ formset.management_form }}
         {{ formset|crispy }}
 
-        <div class="control-group">
-          {{ form|crispy }}
-        </div>
+        {{ form|crispy }}
 
         <button class="btn btn-primary" type="submit">Send us a memory</button>
 
