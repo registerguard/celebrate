@@ -5,10 +5,9 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    Home page<br>
-    {# {% if self.body %} #}
+    {% if self.body %}
         <div class="body-content">
-            {% include "blog/includes/streamfield.html" %}
+            {% include "home/includes/streamfield.html" %}
         </div> <!-- /.body-content -->
-    {# {% endif %} #}
+    {% endif %}
 {% endblock %}
