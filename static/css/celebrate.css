@@ -18,3 +18,8 @@ body {
     font-family: "RGWeb","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
 }
+
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
