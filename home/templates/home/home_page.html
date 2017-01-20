@@ -2,6 +2,16 @@
 
 {% load wagtailcore_tags %}
 
+{% block heading %}
+    <div class="jumbotron">
+        {% for child in  page.body %}
+            {% if child.block_type == 'title' %}
+                <h1>{{ child }}</h1>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}

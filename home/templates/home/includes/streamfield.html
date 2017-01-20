@@ -27,9 +27,9 @@
             <center>
             <div class="img-wrapper {{ child.value.alignment }}">
                 {% if child.value.alignment == "left" or child.value.alignment == "right" %}
-                    {% image child.value.image width-300 as theimage %}
+                    {% image child.value.image width-100 as theimage %}
                 {% else %}
-                    {% image child.value.image width-1280 as theimage %}
+                    {% image child.value.image width-1140 as theimage %}
                 {% endif %}
 
                 <img src="{{ theimage.url }}" width="{{ theimage.width }}" height="{{ theimage.height }}" alt="{{ theimage.alt }}" />
