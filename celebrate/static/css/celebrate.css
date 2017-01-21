@@ -78,7 +78,7 @@ body {
 .img-wrapper img {
     display: block;
     margin-bottom: 0;
-    width: 100%;
+    /*width: 100%;*/
 }
 .img-wrapper.left {
     float: left;
