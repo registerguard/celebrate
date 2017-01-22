@@ -29,10 +29,10 @@
                     {% if child.value.alignment == "left" or child.value.alignment == "right" %}
                         {% image child.value.image width-100 as theimage %}
                     {% else %}
-                        {% image child.value.image max-1140x550 as theimage %}
+                        {% image child.value.image max-1140x600 as theimage %}
                     {% endif %}
                     <center>
-                        <img src="{{ theimage.url }}" width="{{ theimage.width }}" alt="{{ theimage.alt }}" />
+                        <img src="{{ theimage.url }}" alt="{{ theimage.alt }}" />
                     </center>
                 </div>
                 {% if child.value.caption %}
