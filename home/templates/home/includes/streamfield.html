@@ -29,14 +29,10 @@
                     {% if child.value.alignment == "left" or child.value.alignment == "right" %}
                         {% image child.value.image width-100 as theimage %}
                     {% else %}
-                        {% if child.value.image.width > child.value.image.height %} {# horizontal photo #}
-                            {% image child.value.image width-1140 as theimage %}
-                        {% else %}
-                            {% image child.value.image height-550 as theimage %} {# vertical (or square) with a maximum height of 550 #}
-                        {% endif %}
+                        {% image child.value.image max-1140x550 as theimage %}
                     {% endif %}
                     <center>
-                        <img src="{{ theimage.url }}" height="{{ theimage.height }}" width="{{ theimage.width }}" alt="{{ theimage.alt }}" />
+                        <img src="{{ theimage.url }}" width="{{ theimage.width }}" alt="{{ theimage.alt }}" />
                     </center>
                 </div>
                 {% if child.value.caption %}
