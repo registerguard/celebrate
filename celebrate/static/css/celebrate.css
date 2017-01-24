@@ -147,12 +147,16 @@ a.list-group-item .list-group-item-text img {
 }
 .main {
     min-height: 700px;
-    padding-top: 105px;
+    padding-top: 122px;
 }
 @media (max-width: 767px) {
 	.main {
-		padding-top: 49px;
+		padding-top: 66px;
 	}
+}
+
+.page-header {
+	margin: 20px 0;
 }
 
 /*.carousel {
