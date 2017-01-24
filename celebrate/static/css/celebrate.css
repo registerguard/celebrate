@@ -1,12 +1,12 @@
 @font-face {
-	font-family: "RGWeb";
-	src: url("http://fonts.registerguard.com/rg/rgweb.eot");
-	src: url("http://fonts.registerguard.com/rg/rgweb.eot?#iefix") format("embedded-opentype"),
-		url("http://fonts.registerguard.com/rg/rgweb.woff") format("woff"),
-		url("http://fonts.registerguard.com/rg/rgweb.ttf") format("truetype"),
-		url("http://fonts.registerguard.com/rg/rgweb.svg#RGWeb") format("svg");
-	font-weight: normal;
-	font-style: normal;
+    font-family: "RGWeb";
+    src: url("http://fonts.registerguard.com/rg/rgweb.eot");
+    src: url("http://fonts.registerguard.com/rg/rgweb.eot?#iefix") format("embedded-opentype"),
+    url("http://fonts.registerguard.com/rg/rgweb.woff") format("woff"),
+    url("http://fonts.registerguard.com/rg/rgweb.ttf") format("truetype"),
+    url("http://fonts.registerguard.com/rg/rgweb.svg#RGWeb") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @import "http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700";
@@ -33,13 +33,13 @@ body {
 }
 
 @media (max-width: 767px) {
-	.navbar-right img {
-		display: none;
-	}
+    .navbar-right img {
+    display: none;
+    }
 }
 
 .navbar-nav {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 .form-horizontal .form-group {
     margin-left: 0;
@@ -51,10 +51,10 @@ body {
     overflow: hidden;
     width: 100%;
 }
-.body-content img {
+/*.body-content img {
     margin-bottom: 2%;
     margin-top: 2%;
-}
+}*/
 .body-content img.full-width {
     width: 100%;
 }
@@ -72,13 +72,14 @@ body {
     clear: both;
 }
 .img-wrapper {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     position: relative;
 }
-.img-wrapper img {
+.img-wrapper img{
     display: block;
     margin-bottom: 0;
-    /*width: 100%;*/
+    margin-left: auto;
+    margin-right: auto;
 }
 .img-wrapper.left {
     float: left;
@@ -91,31 +92,31 @@ body {
     width: 30%;
 }
 h1 {
-	text-rendering: optimizeLegibility;
-	font-family: Georgia,"Times New Roman",Times,serif;
-	font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-weight: 600;
 }
 .intro {
     font-size: 1.4em;
-	line-height: 1.5em;
+    line-height: 1.5em;
 }
-.caption {
+figcaption {
     /*background: #f2f2f2 none repeat scroll 0 0;*/
-	font-family: Cambria,Georgia,serif;
+    font-family: Cambria,Georgia,serif;
     bottom: 5px;
-	color: #3d3d3d;
-    display: inline-block;
+    color: #3d3d3d;
+    /*display: inline-block;*/
     font-size: 1.15em;
     font-style: italic;
     font-weight: 400;
     left: 5px;
-    margin: 0;
+    margin: 1em auto;
     /*max-width: calc(100% - 10px);*/
-    padding: 0.2em 1em 0.2em 0.5em;
+    padding: 0.2em 1em;
     position: relative;
     z-index: 2;
 }
-.caption p {
+figcaption p {
     margin: 0 !important;
 }
 blockquote {
@@ -150,13 +151,13 @@ a.list-group-item .list-group-item-text img {
     padding-top: 122px;
 }
 @media (max-width: 767px) {
-	.main {
-		padding-top: 66px;
-	}
+    .main {
+    padding-top: 66px;
+    }
 }
 
 .page-header {
-	margin: 20px 0;
+    margin: 20px 0;
 }
 
 /*.carousel {
