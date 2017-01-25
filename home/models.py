@@ -1,3 +1,4 @@
+# coding=utf-8
 from __future__ import absolute_import, unicode_literals
 
 from django import forms
@@ -27,7 +28,11 @@ class PullQuoteBlock(StructBlock):
 
 class ImageFormatChoiceBlock(FieldBlock):
     field = forms.ChoiceField(choices=(
-        ('left', 'Wrap left'), ('right', 'Wrap right'), ('mid', 'Mid width'), ('full', 'Full width'),
+        ('left', 'Wrap left'),
+        ('right', 'Wrap right'),
+        ('mid', 'Mid width'),
+        ('full', 'Full width'),
+        ('ultra', 'Ultra width (Just once per page Carl, and only at the top of the page, for now … )'),
     ))
 
 
