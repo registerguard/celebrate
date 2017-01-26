@@ -26,19 +26,38 @@
         {% elif child.block_type == 'paragraph' %}
             {{ child.value|richtext }}
         {% elif child.block_type == 'aligned_image' %}
-            <figure class="figure img-wrapper {{ child.value.alignment }} img-fluid">
-                {% if child.value.alignment == "left" or child.value.alignment == "right" %}
-                    {% image child.value.image width-100 as theimage %}
-                {% else %}
-                    {% image child.value.image max-1140x600 as theimage %}
-                {% endif %}
-                <img src="{{ theimage.url }}" alt="{{ theimage.alt }}" style="max-width: 100%; height: auto;" />
-                {% if child.value.caption %}
-                    <figcaption class="figure-caption">
-                        {{ child.value.caption|richtext }}
-                    </figcaption>
-                {% endif %}
-            </figure>
+            {% if child.value.alignment == "ultra" %}
+            {# Handle "ultra" width up here. All others below ... #}
+
+                </div> <!-- /.stream-field -->
+                </div> <!-- /.body-content -->
+                </div> <!-- /.main-container -->
+
+                {% image child.value.image max-1140x600 as theimage %}
+                <div style="width: 100%;height: auto;background-image: url({{ theimage.url}});background-position:50% 50%;height:{{ theimage.height }}px;background-repeat:no-repeat;">
+                    <h1 style="height: auto;color:white;">What ho?</h1>
+                </div>
+
+                <div class="main container"> <!-- .main-containter -->
+                <div class="body-content"> <!-- .body-content -->
+                <div class="stream-field"> <!-- .stream-field -->
+
+            {% else %}
+            {# Other widths dealt with here #}
+                <figure class="figure img-wrapper {{ child.value.alignment }} img-fluid">
+                    {% if child.value.alignment == "left" or child.value.alignment == "right" %}
+                        {% image child.value.image width-100 as theimage %}
+                    {% else %}
+                        {% image child.value.image max-1140x600 as theimage %}
+                    {% endif %}
+                    <img src="{{ theimage.url }}" alt="{{ theimage.alt }}" style="max-width: 100%; height: auto;" />
+                    {% if child.value.caption %}
+                        <figcaption class="figure-caption">
+                            {{ child.value.caption|richtext }}
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% endif %}
         {% else %}
             {{ child }}
         {% endif %}
