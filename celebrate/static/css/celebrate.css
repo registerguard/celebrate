@@ -47,7 +47,7 @@ body {
 }
 .body-content {
     clear: both;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
     overflow: hidden;
     width: 100%;
 }
@@ -91,10 +91,29 @@ body {
     margin-left: 5%;
     width: 30%;
 }
+.ultra {
+    width: 100%;
+    height: auto;
+    /*background-attachment: fixed;*/
+    background-position:50% 50%;
+    background-size: cover;
+    height: 600px;
+    background-repeat: no-repeat;
+}
 h1 {
     text-rendering: optimizeLegibility;
     font-family: Georgia,"Times New Roman",Times,serif;
     font-weight: 600;
+}
+.ultra {
+    position: relative;
+}
+.ultra h1 {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 40px;
+    text-shadow: 1px 1px #555;
 }
 .intro {
     font-size: 1.4em;
@@ -147,7 +166,7 @@ a.list-group-item .list-group-item-text img {
     text-align: right;
 }
 .main {
-    min-height: 700px;
+    /*min-height: 700px;*/
     padding-top: 122px;
 }
 @media (max-width: 767px) {

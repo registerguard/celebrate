@@ -34,12 +34,12 @@
                 </div> <!-- /.main-container -->
 
                 {% image child.value.image max-1140x600 as theimage %}
-                <div style="width: 100%;height: auto;background-image: url({{ theimage.url}});background-position:50% 50%;height:{{ theimage.height }}px;background-repeat:no-repeat;">
-                    <h1 style="height: auto;color:white;">What ho?</h1>
+                <div class="{{ child.value.alignment }}" style="background-image: url({{ theimage.url}});">
+                    <h1 style="height: auto;color:white;">{{ child.value.caption}}</h1>
                 </div>
 
                 <div class="main container"> <!-- .main-containter -->
-                <div class="body-content"> <!-- .body-content -->
+                <div class="body-content" style="margin-bottom: 1em;"> <!-- .body-content -->
                 <div class="stream-field"> <!-- .stream-field -->
 
             {% else %}
