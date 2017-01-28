@@ -32,7 +32,7 @@ class ImageFormatChoiceBlock(FieldBlock):
         ('right', 'Wrap right'),
         ('mid', 'Mid width'),
         ('full', 'Full width'),
-        ('ultra', 'Ultra width (Just once per page Carl, and only at the top of the page, for now … )'),
+        ('ultra', 'Ultra width'),
     ))
 
 
