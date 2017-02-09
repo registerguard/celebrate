@@ -35,8 +35,11 @@
 
                 {% image child.value.image max-1140x600 as theimage %}
                 <div class="{{ child.value.alignment }}" style="background-image: url({{ theimage.url}});">
-                    <h1 style="height: auto;color:white;">{{ child.value.caption}}</h1>
+                    {% if forloop.first %}<h1 style="height: auto;color:white;">{{ self.title }}</h1>{% endif %}
                 </div>
+                <figcaption class="figure-caption">
+                    {{ child.value.caption|richtext }}
+                </figcaption>
 
                 <div class="main container"> <!-- .main-containter -->
                 <div class="body-content" style="margin-bottom: 1em;"> <!-- .body-content -->
