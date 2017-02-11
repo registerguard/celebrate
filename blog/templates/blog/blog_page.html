@@ -3,6 +3,7 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
+
     {% if page.body %}
         <div class="body-content">
 
@@ -18,9 +19,11 @@
                         <figure class="figure img-wrapper img-fluid">
                             <img src="{{ theimage.url }}" alt="{{ theimage.alt }}" style="max-width: 100%; height: auto;" />
                             <figcaption class="figure-caption">
-                                {{ child.value.title }}
+                                <p>{{ child.value.title }}</p>
                             </figcaption>
                         </figure>
+                    {% elif page.author and forloop.counter == 2 %}
+                        <p>{{ page.author|safe }}</p>
                     {% elif child.block_type == 'paragraph' %}
                         {{ child }}
                     {% endif %}
