@@ -8,7 +8,7 @@
 Wagtail likes to have a title (headline), but we don't need it here. The title's
 still available for use later downpage though; {{ self.title }}
 {% endcomment %}
-{% block headline %}{% endblock %}
+{% block headline %}<h1>{{ self.title }}</h1>{% endblock %}
 
 {% block content %}
     {% if self.body %}
