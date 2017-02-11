@@ -103,7 +103,7 @@ body {
     height: 600px;
     background-repeat: no-repeat;
 }
-h1 {
+h1, h3 {
     text-rendering: optimizeLegibility;
     font-family: Georgia,"Times New Roman",Times,serif;
     font-weight: 600;
