@@ -30,6 +30,54 @@
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+        <!-- ************************************************* -->
+        <!-- ************          DFP          ************** -->
+        <!-- ************************************************* -->
+
+            <link rel="stylesheet" href="http://advertising.registerguard.com/assets/hosted/css/ads.css">
+
+            <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+            <script>
+                var googletag = googletag || {};
+                googletag.cmd = googletag.cmd || [];
+            </script>
+
+            <script>
+
+                googletag.cmd.push(function() {
+
+                    // Set up size mapping
+                    var mapping = googletag.sizeMapping()
+                        .addSize([0, 0], [320, 50]) // Default banner is mobile banner (320x50)
+                        .addSize([1005, 100], [728, 90]) // On C breakpoint (>1005px) show desktop banner (728x90)
+                        .build();
+
+                    googletag.defineSlot('/30582678/RGM/news', [[320, 50], [728, 90]], 'leaderboard-top')
+                        .setTargeting('pos', ['atf'])
+                        .defineSizeMapping(mapping)
+                        .addService(googletag.pubads());
+                    googletag.defineSlot('/30582678/RGM/news', [300, 250], 'medium-rectangle-1')
+                        .setTargeting('pos', ['atf','rgm_one'])
+                        .addService(googletag.pubads());
+
+                    // KVPs
+                    googletag.pubads().setTargeting('rgm_subcat',['rgm_150'])
+                    //googletag.pubads().setTargeting('page-type','article');
+
+                    // General stuff
+                    googletag.pubads().enableSingleRequest();
+                    googletag.pubads().collapseEmptyDivs();
+                    googletag.enableServices();
+                    
+                });
+
+            </script>
+
+        <!-- ************************************************* -->
+        <!-- ************          /DFP         ************** -->
+        <!-- ************************************************* -->
+
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -42,6 +90,12 @@
         {% endblock %}
 
         <div class="main container">
+
+            <!-- //////////////////// Leaderboard Top  -->
+            <div style="padding: 1rem;">
+                <div class="advert"><div id="leaderboard-top" data-google-query-id="CNO289fjjtICFVeSfgodQ0oI8w"><script>googletag.cmd.push(function() { googletag.display('leaderboard-top'); });</script><div id="google_ads_iframe_/30582678/RGM/news_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/30582678/RGM/news_0" title="3rd party ad content" name="google_ads_iframe_/30582678/RGM/news_0" width="320" height="50" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div></div>
+            </div>
+            <!--  Leaderboard Top //////////////////// -->
 
             {% block headline %}
                 <div class="page-header">
@@ -63,5 +117,14 @@
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
+
+        <!-- [BEGIN] Google Analytics -->
+        {% if not request.is_preview %}
+
+            <script>(function(r,g,n,e,w,s){r.GoogleAnalyticsObject=e;r[e]||(r[e]=function(){(r[e].q=r[e].q||[]).push(arguments)});r[e].l=+new Date;w=g.createElement(n);s=g.getElementsByTagName(n)[0];w.src='//www.google-analytics.com/analytics.js';s.parentNode.insertBefore(w,s)}(window,document,'script','ga'));ga('create','UA-882065-1','registerguard.com');ga('require','displayfeatures');ga('require','linkid','linkid.js');ga('send','pageview');</script>
+
+        {% endif %}
+        <!-- [BEGIN] Google Analytics -->
+
     </body>
 </html>
