@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from .api import api_router
 from search import views as search_views
 from wagtail.contrib.wagtailsitemaps.views import sitemap
 from wagtail.wagtailadmin import urls as wagtailadmin_urls
@@ -12,6 +13,8 @@ from wagtail.wagtaildocs import urls as wagtaildocs_urls
 
 urlpatterns = [
     url(r'^django-admin/', include(admin.site.urls)),
+
+    url(r'^api/v2/', api_router.urls),
 
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'home',
     'search',
 
+    'wagtail.api.v2',
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.wagtailsitemaps',
     'wagtail.contrib.wagtailstyleguide',
@@ -71,6 +72,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'modelcluster',
+    'rest_framework',
     'taggit',
 
     'django.contrib.admin',
